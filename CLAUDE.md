@@ -49,4 +49,11 @@ Pipeline:
   abstracted out of git (config.example.json + .gitignore), repo published
   at https://github.com/JunHossain/MuteTeammates (public, portfolio).
 - **2026-07-12**: Roster now includes the user (riot.py no longer excludes
-  self), so they get muted on death too. Untested in a live match so far.
+  self), so they get muted on death too. Confirmed working live by the user.
+- **2026-07-12**: Project is DONE for now. Deferred idea (maybe later): a
+  hosted v2 where others invite the user's bot instead of creating their
+  own — needs a client/server split (local vision client talks to a 24/7
+  hosted bot via an authenticated API) plus hosting. Current architecture
+  can't support shared-bot invites: the bot IS the local process, so an
+  invite link in the README would be misleading. The user plans to work on
+  their portfolio next (separate from this repo).

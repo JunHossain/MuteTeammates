@@ -1,4 +1,5 @@
-"""Discord bot: server-mutes dead teammates on a mouse side-button toggle.
+"""Discord bot: server-mutes dead players on your team (you included)
+on a mouse side-button toggle.
 
 One asyncio process. A pynput listener thread pushes toggle events into the
 bot's event loop. A background task polls the local Riot API and refreshes

@@ -71,7 +71,7 @@ def main():
         roster = riot.get_teammates()
         if not roster:
             sys.exit("No teammates found — are you in a live match?")
-        print("Teammates this match:")
+        print("Your team this match:")
         for p in roster:
             print(f"  {p['agent']:<12} {p['ign']}")
         if args.test_vision:

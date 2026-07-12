@@ -13,7 +13,7 @@ in Discord at the press of a mouse side button. Portfolio project of the user.
 Pipeline:
 1. `riot.py` — connects to the *local* Riot client API (via `valclient`
    lockfile auth) to learn the current match roster: which agent each
-   teammate plays and their IGN. Also downloads agent portrait icons from
+   player on our team plays (self included) and their IGN. Also downloads agent portrait icons from
    valorant-api.com into `templates/` (auto-cached, gitignored).
 2. `vision.py` — screenshots the top HUD strip (`mss`) and template-matches
    each roster agent's portrait against it (OpenCV `TM_CCOEFF_NORMED`).
@@ -39,9 +39,14 @@ Pipeline:
   mouse button `x2`, threshold 0.75 — all confirmed working (2026-07-12).
 - Server-mute only works when targets are in a voice channel of the guild.
 - The local Riot API is unofficial; treat it as read-only.
+- The roster includes the user themself — they get muted on death too
+  (their IGN must be in the `players` map like everyone else's).
+- Commit messages: short, single line, no Claude attribution / trailers.
 
 ## Current status
 
 - **2026-07-12**: Tool confirmed fully working by the user. Secrets were
-  abstracted out of git (config.example.json + .gitignore), repo initialized
-  and published to GitHub as a portfolio project.
+  abstracted out of git (config.example.json + .gitignore), repo published
+  at https://github.com/JunHossain/MuteTeammates (public, portfolio).
+- **2026-07-12**: Roster now includes the user (riot.py no longer excludes
+  self), so they get muted on death too. Untested in a live match so far.

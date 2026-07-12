@@ -1,7 +1,8 @@
 """Screen vision: is each teammate's agent portrait present in the HUD strip?
 
-The top-center-left HUD strip shows one portrait per *living* teammate.
-Dead teammates' portraits are removed (survivors may reflow), so we don't
+The top-center-left HUD strip shows one portrait per *living* ally,
+your own included. Dead allies' portraits are removed (survivors may
+reflow), so we don't
 track slots at all — we just template-match each roster agent against the
 whole strip. Present = alive, absent = dead.
 

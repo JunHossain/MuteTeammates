@@ -59,7 +59,7 @@ class RiotLocal:
             return None
 
     def get_teammates(self):
-        """Roster of teammates (excluding self) for the current match.
+        """Roster of our whole team (including self) for the current match.
 
         Returns a list of {puuid, agent, ign, game_name} dicts.
         """
@@ -69,8 +69,7 @@ class RiotLocal:
         players = match["Players"]
 
         my_team = next(p["TeamID"] for p in players if p["Subject"] == me)
-        mates = [p for p in players
-                 if p["TeamID"] == my_team and p["Subject"] != me]
+        mates = [p for p in players if p["TeamID"] == my_team]
 
         names = self._resolve_names([p["Subject"] for p in mates])
 

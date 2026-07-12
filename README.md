@@ -3,10 +3,11 @@
 Mute your dead Valorant teammates in Discord with one mouse button.
 
 **How it works:** at match start, the local Riot client API tells us which
-agent each teammate is playing and their IGN. When you press your mouse side
-button, one screenshot of the top HUD strip is taken; any teammate whose
-agent portrait is missing from the strip is dead — the Discord bot
-server-mutes them. Press again to unmute everyone.
+agent everyone on your team is playing and their IGN. When you press your
+mouse side button, one screenshot of the top HUD strip is taken; anyone
+whose agent portrait is missing from the strip is dead — the Discord bot
+server-mutes them. That includes you, if you're in the players map and
+annoying from the grave. Press again to unmute everyone.
 
 ## Setup
 
@@ -47,8 +48,9 @@ copy config.example.json config.json
 }
 ```
 
-Put **everyone who ever plays with you** in there — each match, only the 5
-actually in the game matter. `riot.region` is your Valorant region
+Put **everyone who ever plays with you** in there — yourself included, if
+you want to be muted when you die too. Each match, only the 5 actually in
+the game matter. `riot.region` is your Valorant region
 (`ap`, `na`, `eu`, `kr`, `br`, `latam`).
 
 ### 5. Tune the screen region (one time)

@@ -1,0 +1,18 @@
+# Real config: contains the Discord bot token, guild id and friends' user ids.
+# Copy config.example.json to config.json and fill it in.
+config.json
+
+# Agent portrait templates are auto-downloaded from valorant-api.com at runtime.
+templates/
+
+# Local capture output from `python main.py --capture`
+strip.png
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local Claude Code permission settings
+.claude/settings.local.json
